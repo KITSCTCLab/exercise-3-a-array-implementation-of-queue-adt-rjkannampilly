@@ -28,7 +28,7 @@ class Solution:
         Returns:
           True if it is empty, else returns False.
         """
-        if len(self.stack)==0:
+        if len(self.top)==-1:
             return True
         else:
             return False
@@ -39,7 +39,7 @@ class Solution:
         Returns:
           True if it is empty, else returns False.
         """
-        if len(self.queue)==0:
+        if len(self.front)==-1:
             return True
         else:
             return False
@@ -51,7 +51,7 @@ class Solution:
         Returns:
           True if it is full, else returns False.
         """
-        if len(self.stack)==self.size:
+        if len(self.top)==self.size-1:
             return True
         else:
             return False
@@ -62,7 +62,7 @@ class Solution:
         Returns:
           True if it is full, else returns False.
         """
-        if len(self.queue)==self.size:
+        if len(self.rear)==self.size-1:
             return True
         else:
             return False
@@ -135,8 +135,8 @@ compare both characters
 If the comparison fails, set is_palindrome as False.
 '''
 for i in range(length_of_text//2):
-    a=pop_character(self)
-    b=dequeue_character(self)
+    a=solution.pop_character(self)
+    b=solution.dequeue_character(self)
     if a!=b:
         is_palindrome= False
         break

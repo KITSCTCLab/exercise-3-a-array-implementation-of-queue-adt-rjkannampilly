@@ -28,7 +28,7 @@ class Solution:
         Returns:
           True if it is empty, else returns False.
         """
-        if len(self.top)==-1:
+        if (self.top)==-1:
             return True
         else:
             return False
@@ -39,7 +39,7 @@ class Solution:
         Returns:
           True if it is empty, else returns False.
         """
-        if len(self.front)==-1:
+        if (self.front)==-1:
             return True
         else:
             return False
@@ -51,7 +51,7 @@ class Solution:
         Returns:
           True if it is full, else returns False.
         """
-        if len(self.top)==self.size-1:
+        if (self.top)==self.size-1:
             return True
         else:
             return False
@@ -62,7 +62,7 @@ class Solution:
         Returns:
           True if it is full, else returns False.
         """
-        if len(self.rear)==self.size-1:
+        if (self.rear)==self.size-1:
             return True
         else:
             return False
